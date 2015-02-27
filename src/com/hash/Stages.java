@@ -42,6 +42,9 @@ public class Stages
 	{
 		long a = _a, b = _b, c = _c, d = _d;
 		
+		//for rounds >= 10
+		r %= 10;
+		
 		a = a + b + (Blacke256.m[Constants_256.P[r][2 * i]] ^ Constants_256.C[Constants_256.P[r][2 * i + 1]]);
 		d = Long.rotateRight((d ^ a), 16);
 		c += d;
@@ -94,7 +97,47 @@ public class Stages
 			Stages.v[8]  = temp[2];
 			Stages.v[12] = temp[3];
 			
+			temp = G(1, Stages.v[1], Stages.v[5], Stages.v[9], Stages.v[13], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
 			
+			temp = G(2, Stages.v[2], Stages.v[6], Stages.v[10], Stages.v[14], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
+			
+			temp = G(3, Stages.v[3], Stages.v[7], Stages.v[11], Stages.v[15], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
+			
+			temp = G(4, Stages.v[0], Stages.v[5], Stages.v[10], Stages.v[15], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
+			
+			temp = G(5, Stages.v[1], Stages.v[6], Stages.v[11], Stages.v[12], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
+			
+			temp = G(6, Stages.v[2], Stages.v[7], Stages.v[8], Stages.v[13], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
+			
+			temp = G(7, Stages.v[3], Stages.v[4], Stages.v[9], Stages.v[14], r);
+			Stages.v[0]  = temp[0];
+			Stages.v[4]  = temp[1];
+			Stages.v[8]  = temp[2];
+			Stages.v[12] = temp[3];
 		}
 	}
 }
