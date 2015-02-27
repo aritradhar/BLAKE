@@ -1,9 +1,11 @@
 package com.hash;
 
+import java.util.Arrays;
+
 public class Constants_256 
 {
-	public static int []IV = 
-		{
+	public static final long [] IV = 
+	{
 		0x6A09E667,
 		0xBB67AE85,
 		0x3C6EF372,
@@ -12,10 +14,10 @@ public class Constants_256
 		0x9B05688C,
 		0x1F83D9AB,
 		0x5BE0CD19
-		};
+	};
 	
-	public static int []C = 
-		{
+	public static final long [] C = 
+	{
 		0x243F6A88, 
 		0x85A308D3, 
 		0x13198A2E, 
@@ -32,9 +34,14 @@ public class Constants_256
 		0xC97C50DD, 
 		0x3F84D5B5, 
 		0xB5470917
-		};
+	};
 	
-	public static short [][]P = {
+	public static final short[] t = {0, 0};
+	
+	public static long[] h = Arrays.copyOf(IV, 8);
+	
+	public static final short [][] P = 
+	{
 		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
 		{14, 10, 4, 8, 9, 15, 13, 6, 1, 12, 0, 2, 11, 7, 5, 3},
 		{11, 8, 12, 0, 5, 2, 15, 13, 10, 14, 3, 6, 7, 1, 9, 4},
