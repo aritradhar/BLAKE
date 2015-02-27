@@ -57,18 +57,18 @@ public class Stages
 		return new long[]{a, b, c, d};
 	}
 	
-	public static final long[] finalize(long[] v)
+	public static long[] finalStage()
 	{
 		long[] _h = new long[8];
 		
-		_h[0] = Constants_256.h[0] ^ Blacke256.s[0] ^ v[0] ^ v[8];
-		_h[1] = Constants_256.h[1] ^ Blacke256.s[1] ^ v[1] ^ v[9];
-		_h[2] = Constants_256.h[2] ^ Blacke256.s[2] ^ v[2] ^ v[10];
-		_h[3] = Constants_256.h[3] ^ Blacke256.s[3] ^ v[3] ^ v[11];
-		_h[4] = Constants_256.h[4] ^ Blacke256.s[0] ^ v[4] ^ v[12];
-		_h[5] = Constants_256.h[5] ^ Blacke256.s[1] ^ v[5] ^ v[13];
-		_h[6] = Constants_256.h[6] ^ Blacke256.s[2] ^ v[6] ^ v[14];
-		_h[7] = Constants_256.h[7] ^ Blacke256.s[3] ^ v[7] ^ v[15];
+		_h[0] = Constants_256.h[0] ^ Blacke256.s[0] ^ Stages.v[0] ^ Stages.v[8];
+		_h[1] = Constants_256.h[1] ^ Blacke256.s[1] ^ Stages.v[1] ^ Stages.v[9];
+		_h[2] = Constants_256.h[2] ^ Blacke256.s[2] ^ Stages.v[2] ^ Stages.v[10];
+		_h[3] = Constants_256.h[3] ^ Blacke256.s[3] ^ Stages.v[3] ^ Stages.v[11];
+		_h[4] = Constants_256.h[4] ^ Blacke256.s[0] ^ Stages.v[4] ^ Stages.v[12];
+		_h[5] = Constants_256.h[5] ^ Blacke256.s[1] ^ Stages.v[5] ^ Stages.v[13];
+		_h[6] = Constants_256.h[6] ^ Blacke256.s[2] ^ Stages.v[6] ^ Stages.v[14];
+		_h[7] = Constants_256.h[7] ^ Blacke256.s[3] ^ Stages.v[7] ^ Stages.v[15];
 		
 		return _h;
 	}
