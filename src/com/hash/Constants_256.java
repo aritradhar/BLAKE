@@ -2,31 +2,37 @@ package com.hash;
 
 public class Constants_256 
 {
-	public static int IV0 = 0x6A09E667;
-	public static int IV1 = 0xBB67AE85;
-	public static int IV2 = 0x3C6EF372;
-	public static int IV3 = 0xA54FF53A;
-	public static int IV4 = 0x510E527F;
-	public static int IV5 = 0x9B05688C;
-	public static int IV6 = 0x1F83D9AB;
-	public static int IV7 = 0x5BE0CD19;
+	public static int []IV = 
+		{
+		0x6A09E667,
+		0xBB67AE85,
+		0x3C6EF372,
+		0xA54FF53A,
+		0x510E527F,
+		0x9B05688C,
+		0x1F83D9AB,
+		0x5BE0CD19
+		};
 	
-	public static int C0 = 0x243F6A88;
-	public static int C1 = 0x85A308D3;
-	public static int C2 = 0x13198A2E;
-	public static int C3 = 0x03707344;
-	public static int C4 = 0xA4093822;
-	public static int C5 = 0x299F31D0;
-	public static int C6 = 0x082EFA98;
-	public static int C7 = 0xEC4E6C89;
-	public static int C8 = 0x452821E6;
-	public static int C9 = 0x38D01377;
-	public static int C10 = 0xBE5466CF;
-	public static int C11 = 0x34E90C6C;
-	public static int C12 = 0xC0AC29B7;
-	public static int C13 = 0xC97C50DD;
-	public static int C14 = 0x3F84D5B5;
-	public static int C15 = 0xB5470917;
+	public static int []C = 
+		{
+		0x243F6A88, 
+		0x85A308D3, 
+		0x13198A2E, 
+		0x03707344, 
+		0xA4093822, 
+		0x299F31D0, 
+		0x082EFA98, 
+		0xEC4E6C89, 
+		0x452821E6, 
+		0x38D01377, 
+		0xBE5466CF, 
+		0x34E90C6C, 
+		0xC0AC29B7, 
+		0xC97C50DD, 
+		0x3F84D5B5, 
+		0xB5470917
+		};
 	
 	public static short [][]P = {
 		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
