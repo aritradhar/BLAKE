@@ -4,36 +4,52 @@ import java.util.Arrays;
 
 public class Constants_256 
 {
-	public static final long [] IV = 
+	public static final long []IV = 
 	{
-		0x6A09E667,
-		0xBB67AE85,
-		0x3C6EF372,
-		0xA54FF53A,
-		0x510E527F,
-		0x9B05688C,
-		0x1F83D9AB,
-		0x5BE0CD19
+		Long.parseLong("6A09E667", 16),
+		Long.parseLong("BB67AE85", 16),
+		Long.parseLong("3C6EF372", 16),
+		Long.parseLong("A54FF53A", 16),
+		Long.parseLong("510E527F", 16),
+		Long.parseLong("9B05688C", 16),
+		Long.parseLong("1F83D9AB", 16),
+		Long.parseLong("5BE0CD19", 16),
 	};
 	
-	public static final long [] C = 
+	public static final long []C = 
 	{
-		0x243F6A88, 
-		0x85A308D3, 
-		0x13198A2E, 
-		0x03707344, 
-		0xA4093822, 
-		0x299F31D0, 
-		0x082EFA98, 
-		0xEC4E6C89, 
-		0x452821E6, 
-		0x38D01377, 
-		0xBE5466CF, 
-		0x34E90C6C, 
-		0xC0AC29B7, 
-		0xC97C50DD, 
-		0x3F84D5B5, 
-		0xB5470917
+		Long.parseLong("243F6A88", 16),
+		//0x243F6A88, 
+		Long.parseLong("85A308D3", 16),
+		//0x85A308D3, 
+		Long.parseLong("13198A2E", 16),
+		//0x13198A2E, 
+		Long.parseLong("03707344", 16),
+		//0x03707344, 
+		Long.parseLong("A4093822", 16),
+		//0xA4093822, 
+		Long.parseLong("299F31D0", 16),
+		//0x299F31D0, 
+		Long.parseLong("082EFA98", 16),
+		//0x082EFA98, 
+		Long.parseLong("EC4E6C89", 16),
+		//0xEC4E6C89, 
+		Long.parseLong("452821E6", 16),
+		//0x452821E6, 
+		Long.parseLong("38D01377", 16),
+		//0x38D01377, 
+		Long.parseLong("BE5466CF", 16),
+		//0xBE5466CF, 
+		Long.parseLong("34E90C6C", 16),
+		//0x34E90C6C, 
+		Long.parseLong("C0AC29B7", 16),
+		//0xC0AC29B7, 
+		Long.parseLong("C97C50DD", 16),
+		//0xC97C50DD, 
+		Long.parseLong("3F84D5B5", 16),
+		//0x3F84D5B5, 
+		Long.parseLong("B5470917", 16),
+		//0xB5470917
 	};
 	
 	public static final short[] t = {0, 0};
